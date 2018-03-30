@@ -1,0 +1,22 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ada">
+
+    <group name="manipulator">
+      <chain base_link="j2n6s200_link_base" tip_link="j2n6s200_link_6/INPUT_INTERFACE"/>
+    </group>
+
+    <!-- ADA self collisions -->
+    <disable_collisions link1="j2n6s200_link_base" link2="j2n6s200_link_1/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_1/INPUT_INTERFACE" link2="j2n6s200_link_2/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_2/INPUT_INTERFACE" link2="j2n6s200_link_3/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_3/INPUT_INTERFACE" link2="j2n6s200_link_4/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_4/INPUT_INTERFACE" link2="j2n6s200_link_5/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_5/INPUT_INTERFACE" link2="j2n6s200_link_6/INPUT_INTERFACE"/>
+    <disable_collisions link1="j2n6s200_link_6/INPUT_INTERFACE" link2="j2n6s200_end_effector/INPUT_INTERFACE"/>
+
+    <group name="endEffector">
+      <link name="j2n6s200_end_effector/INPUT_INTERFACE"/>
+    </group>
+
+    <end_effector name="end_effector" parent_link="j2n6s200_end_effector/INPUT_INTERFACE" group="endEffector"/>
+
+</robot>
