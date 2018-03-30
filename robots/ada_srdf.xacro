@@ -1,4 +1,4 @@
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ada">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="j2n6s200">
 
     <group name="manipulator">
       <chain base_link="j2n6s200_link_base" tip_link="j2n6s200_link_6"/>
