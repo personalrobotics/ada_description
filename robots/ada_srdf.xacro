@@ -17,6 +17,20 @@
       <link name="j2n6s200_end_effector"/>
     </group>
 
+    <group name="j2n6s200_hand">
+      <link name="j2n6s200_link_finger_1"/>
+      <link name="j2n6s200_link_finger_tip_1"/>
+      <link name="j2n6s200_link_finger_2"/>
+      <link name="j2n6s200_link_finger_tip_2"/>
+    </group>
+
+    <!--<group name="j2n6s200_hand">
+      <chain base_link="j2n6s200_link_finger_1" tip_link="j2n6s200_link_finger_tip_1"/>
+      <chain base_link="j2n6s200_link_finger_2" tip_link="j2n6s200_link_finger_tip_2"/>
+    </group>-->
+    
     <end_effector name="end_effector" parent_link="j2n6s200_end_effector" group="endEffector"/>
+
+
 
 </robot>
