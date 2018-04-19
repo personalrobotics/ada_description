@@ -59,14 +59,6 @@
       <inertia ixx="0.000951270861568" ixy="0" ixz="0" iyy="0.000951270861568" iyz="0" izz="0.000374272"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_base" type="fixed">
-    <parent link="root"/>
-    <child link="j2n6s200_link_base"/>
-    <axis xyz="0 0 0"/>
-    <limit effort="2000" lower="0" upper="0" velocity="1"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-    <dynamics damping="0.0" friction="0.0"/>
-  </joint>
   <link name="j2n6s200_link_1">
     <visual>
       <geometry>
