@@ -39,35 +39,6 @@
    finger_proximal		57
    finger_distal      58 
 -->
-  <link name="root">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.0001 0.0001 0.0001"/>
-      </geometry>
-      <!--<material name="Black" /> -->
-    </visual>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.01 0.01 0.01"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- for gazebo -->
-  <link name="world"/>
-  <joint name="connect_root_and_world" type="fixed">
-    <child link="root"/>
-    <parent link="world"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
-  <!-- ros_control plugin -->
-  <gazebo>
-    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
-      <robotNamespace>j2n6s200</robotNamespace>
-      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
-    </plugin>
-  </gazebo>
   <link name="j2n6s200_link_base">
     <visual>
       <geometry>
