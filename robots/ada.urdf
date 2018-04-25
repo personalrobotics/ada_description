@@ -466,5 +466,32 @@
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
     <limit effort="2000" lower="0" upper="2" velocity="1"/>
   </joint>
+  <link name="j2n6s200_forque">
+    <visual>
+      <geometry>
+        <mesh filename="package://ada_description/meshes/forque_kinova.STL"/>
+      </geometry>
+      <!-- <material name="carbon_fiber">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      </material> -->
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://ada_description/meshes/forque_kinova.STL"/>
+      </geometry>
+    </collision>
+    <!-- <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0.022 0 0"/>
+      <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
+    </inertial> -->
+  </link>
+  <joint name="j2n6s200_joint_forque" type="fixed">
+    <parent link="j2n6s200_end_effector"/>
+    <child link="j2n6s200_forque"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
+    <limit effort="2000" lower="0" upper="2" velocity="1"/>
+  </joint>
 </robot>
 
