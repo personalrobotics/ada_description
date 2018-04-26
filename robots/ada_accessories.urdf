@@ -469,7 +469,7 @@
   <link name="j2n6s200_forque">
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/forque_kinova.STL"/>
+          <mesh filename="package://ada_description/meshes/forque_kinova.dae" scale="0.001 0.001 0.001"/>
       </geometry>
       <!-- <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -477,7 +477,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/forque_kinova.STL"/>
+        <mesh filename="package://ada_description/meshes/forque_kinova.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <!-- <inertial>
@@ -487,14 +487,14 @@
     </inertial> -->
   </link>
   <joint name="j2n6s200_joint_forque" type="fixed">
-    <parent link="j2n6s200_end_effector"/>
+    <parent link="j2n6s200_link_6"/>
     <child link="j2n6s200_forque"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
     <limit effort="2000" lower="0" upper="2" velocity="1"/>
   </joint>
 
-  <link name="joule">
+  <link name="j2n6s200_joule">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -511,9 +511,9 @@
       </geometry>
     </collision>
   </link>
-  <joint name="joule" type="continuous">
+  <joint name="j2n6s200_joule" type="continuous">
     <parent link="j2n6s200_link_6"/>
-    <child link="joule"/>
+    <child link="j2n6s200_joule"/>
     <axis xyz="0 0 1"/>
     <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
     <origin rpy="1.57079632679 1.57079632679 0" xyz="0.06 0.051 0.0163"/>
