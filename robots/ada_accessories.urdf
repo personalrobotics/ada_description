@@ -457,11 +457,11 @@
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
-    <!--collision>
+    <collision>
       <geometry>
         <mesh filename="package://ada_description/meshes/forque_kinova.dae" scale="0.001 0.001 0.001"/>
       </geometry>
-    </collision-->
+    </collision>
     <!-- <inertial>
       <mass value="0.01"/>
       <origin xyz="0.022 0 0"/>
@@ -486,12 +486,12 @@
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
-    <!--collision>
+    <collision>
     <origin xyz="-0.014 -0.072 -0.025" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://ada_description/meshes/camera_joule_tex.dae" scale="0.001 0.001 0.00094"/>
       </geometry>
-    </collision-->
+    </collision>
   </link>
   <joint name="j2n6s200_joule" type="fixed">
     <parent link="j2n6s200_link_6"/>
