@@ -49,7 +49,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_big.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
     </visual>
     <collision>
@@ -92,7 +92,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_big.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
     </visual>
     <collision>
@@ -135,7 +135,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_big.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
     </visual>
     <collision>
@@ -178,7 +178,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_small.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
     </visual>
     <collision>
@@ -221,7 +221,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_small.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
     </visual>
     <collision>
@@ -264,7 +264,7 @@
     </visual>
     <visual>
       <geometry>
-        <mesh filename="package://ada_description/meshes/ring_small.STL"/>
+        <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
     </visual>
     <collision>
