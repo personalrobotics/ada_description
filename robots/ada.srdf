@@ -15,6 +15,9 @@
   <disable_collisions link1="j2n6s200_link_4" link2="j2n6s200_link_5"/>
   <disable_collisions link1="j2n6s200_link_5" link2="j2n6s200_link_6"/>
   <disable_collisions link1="j2n6s200_link_6" link2="j2n6s200_end_effector"/>
+  <disable_collisions link1="j2n6s200_link_6" link2="j2n6s200_joule"/>
+
+  
   <group name="j2n6s200_hand">
     <link name="j2n6s200_link_finger_1"/>
     <link name="j2n6s200_link_finger_tip_1"/>
