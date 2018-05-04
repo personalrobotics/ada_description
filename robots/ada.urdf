@@ -50,7 +50,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/base.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_base.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -75,7 +75,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/shoulder.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_shoulder.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -118,7 +118,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/arm.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_arm.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -161,7 +161,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/forearm.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_forearm.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -204,7 +204,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/wrist.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_wrist.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -247,7 +247,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/wrist.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_wrist.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -290,7 +290,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/hand_2finger.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_hand_2finger.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -347,7 +347,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_finger_proximal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -384,7 +384,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_finger_distal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -412,7 +412,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_finger_proximal.dae"/>
       </geometry>
     </collision>
     <inertial>
@@ -449,7 +449,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
+        <mesh filename="package://ada_description/meshes/collision_finger_distal.dae"/>
       </geometry>
     </collision>
     <inertial>
