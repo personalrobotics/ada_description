@@ -2,13 +2,13 @@
 <package>
   <name>ada_description</name>
   <version>2.0.0</version>
-  <description>Models for UW-ADA components</description>
+  <description>Models for ADA components</description>
 
   <maintainer email="tapo@uw.edu">Tapomayukh Bhattacharjee</maintainer>
 
   <license>TODO</license>
 
-  <author email="xyz@uw.edu">XYZ</author>
+  <author email="tapo@uw.edu">Tapomayukh Bhattacharjee</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
