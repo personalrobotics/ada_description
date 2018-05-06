@@ -1,2 +1,2 @@
 # ada_description
-urdf files for UW-ADA
+urdf files for ADA
