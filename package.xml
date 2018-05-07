@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ada_description</name>
-  <version>2.0.0</version>
+  <version>0.1.0</version>
   <description>Models for ADA components</description>
 
   <maintainer email="tapo@uw.edu">Tapomayukh Bhattacharjee</maintainer>
