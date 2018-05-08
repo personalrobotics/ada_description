@@ -404,7 +404,6 @@
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
     <limit effort="0" lower="0" upper="2" velocity="1"/>
-    <mimic joint="j2n6s200_joint_finger_1" multiplier="0.33" offset="0.0">
   </joint>
   <link name="j2n6s200_link_finger_2">
     <visual>
@@ -470,7 +469,6 @@
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
     <limit effort="0" lower="0" upper="2" velocity="1"/>
-    <mimic joint="j2n6s200_joint_finger_2" multiplier="0.33" offset="0.0">
   </joint>
 
 </robot>
