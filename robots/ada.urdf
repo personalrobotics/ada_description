@@ -20,7 +20,7 @@
    hand 3 finger  		55
    hand_2finger   		56
    finger_proximal		57
-   finger_distal      58 
+   finger_distal      58
 -->
   <!-- links      		mesh_no
    base           		0
@@ -37,8 +37,9 @@
    hand 3 finger  		55
    hand_2finger   		56
    finger_proximal		57
-   finger_distal      58 
+   finger_distal      58
 -->
+  <link name="world"/>
   <link name="j2n6s200_link_base">
     <visual>
       <geometry>
@@ -59,6 +60,11 @@
       <inertia ixx="0.000951270861568" ixy="0" ixz="0" iyy="0.000951270861568" iyz="0" izz="0.000374272"/>
     </inertial>
   </link>
+  <joint name="j2n6s200_joint_base" type="fixed">
+    <parent link="world"/>
+    <child link="j2n6s200_link_base"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
   <link name="j2n6s200_link_1">
     <visual>
       <geometry>
@@ -318,16 +324,6 @@
     </actuator>
   </transmission>
   <link name="j2n6s200_end_effector">
-    <visual>
-      <geometry>
-        <box size="0.0001 0.0001 0.0001"/>
-      </geometry>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="0.01 0.01 0.01"/>
-      </geometry>
-    </collision>
   </link>
   <joint name="j2n6s200_joint_end_effector" type="fixed">
     <parent link="j2n6s200_link_6"/>
@@ -335,6 +331,15 @@
     <axis xyz="0 0 0"/>
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
     <origin rpy="3.14159265359 0 0" xyz="0 0 -0.1600"/>
+  </joint>
+  <link name="j2n6s200_hand_base">
+   <!-- This is a fake link for defining the root of the hand -->
+  </link>
+  <joint name="j2n6s200_joint_hand_base" type="fixed">
+    <parent link="j2n6s200_link_6"/>
+    <child link="j2n6s200_hand_base"/>
+    <axis xyz="0 0 0"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
   </joint>
   <link name="j2n6s200_link_finger_1">
     <visual>
@@ -357,7 +362,7 @@
     </inertial>
   </link>
   <joint name="j2n6s200_joint_finger_1" type="revolute">
-    <parent link="j2n6s200_link_6"/>
+    <parent link="j2n6s200_hand_base"/>
     <child link="j2n6s200_link_finger_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="-1.570796327 .649262481663582 1.57079632679490" xyz="-0.0025 0.03095 -0.11482"/>
@@ -393,13 +398,12 @@
       <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
     </inertial>
   </link>
-  <!-- Tapo: changed from fixed to revolute for simulating motion -->
   <joint name="j2n6s200_joint_finger_tip_1" type="revolute">
     <parent link="j2n6s200_link_finger_1"/>
     <child link="j2n6s200_link_finger_tip_1"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
-    <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    <limit effort="0" lower="0" upper="2" velocity="1"/>
   </joint>
   <link name="j2n6s200_link_finger_2">
     <visual>
@@ -422,7 +426,7 @@
     </inertial>
   </link>
   <joint name="j2n6s200_joint_finger_2" type="revolute">
-    <parent link="j2n6s200_link_6"/>
+    <parent link="j2n6s200_hand_base"/>
     <child link="j2n6s200_link_finger_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="-1.570796327 .649262481663582 -1.57079632679490" xyz="-0.0025 -0.03095 -0.11482"/>
@@ -464,7 +468,7 @@
     <child link="j2n6s200_link_finger_tip_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
-    <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    <limit effort="0" lower="0" upper="2" velocity="1"/>
   </joint>
 
 </robot>
