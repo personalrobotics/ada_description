@@ -39,7 +39,7 @@
       <inertia ixx="0.000951270861568" ixy="0" ixz="0" iyy="0.000951270861568" iyz="0" izz="0.000374272"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_base" type="fixed">
+  <joint name="j2n6s200_joint_base" type="floating">
     <parent link="world"/>
     <child link="j2n6s200_link_base"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
