@@ -159,7 +159,7 @@
     <parent link="j2n6s200_link_2"/>
     <child link="j2n6s200_link_3"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-4.104090" upper="0.9515727493" velocity="1"/>
+    <limit effort="2000" lower="0.33161255787" upper="5.9515727493" velocity="1"/>
     <origin rpy="0 3.14159265359 0" xyz="0 -0.410 0"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -378,7 +378,7 @@
     </inertial>
   </link>
   <!-- Tapo: changed from fixed to revolute for simulating motion -->
-  <joint name="j2n6s200_joint_finger_tip_1" type="revolute">
+  <joint name="j2n6s200_joint_finger_tip_1" type="fixed">
     <parent link="j2n6s200_link_finger_1"/>
     <child link="j2n6s200_link_finger_tip_1"/>
     <axis xyz="0 0 1"/>
@@ -405,7 +405,7 @@
       <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_finger_2" type="revolute">
+  <joint name="j2n6s200_joint_finger_2" type="fixed">
     <parent link="j2n6s200_hand_base"/>
     <child link="j2n6s200_link_finger_2"/>
     <axis xyz="0 0 1"/>
