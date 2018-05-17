@@ -344,7 +344,7 @@
     <parent link="j2n6s200_hand_base"/>
     <child link="j2n6s200_link_finger_1"/>
     <axis xyz="0 0 1"/>
-   <origin rpy="-1.570796327 1.75 1.57079632679490" xyz="-0.0025 0.03095 -0.11482"/>
+    <origin rpy="-1.570796327 .649262481663582 1.57079632679490" xyz="-0.0025 0.03095 -0.11482"/>
     <limit effort="2000" lower="0" upper="2" velocity="1"/>
   </joint>
   <transmission name="j2n6s200_joint_finger_1_trans">
@@ -405,12 +405,12 @@
       <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_finger_2" type="fixed">
+  <joint name="j2n6s200_joint_finger_2" type="revolute">
     <parent link="j2n6s200_hand_base"/>
     <child link="j2n6s200_link_finger_2"/>
     <axis xyz="0 0 1"/>
-    <origin rpy="-1.570796327 1.75 -1.57079632679490" xyz="-0.0025 -0.03095 -0.11482"/>
-    <limit effort="0" lower="0" upper="2" velocity="1"/>
+    <origin rpy="-1.570796327 .649262481663582 -1.57079632679490" xyz="-0.0025 -0.03095 -0.11482"/>
+    <limit effort="2000" lower="0" upper="2" velocity="1"/>
   </joint>
   <transmission name="j2n6s200_joint_finger_2_trans">
     <type>transmission_interface/SimpleTransmission</type>
@@ -443,12 +443,12 @@
     </inertial>
   </link>
   <!-- Tapo: changed from fixed to revolute for simulating motion -->
-  <joint name="j2n6s200_joint_finger_tip_2" type="revolute">
+  <joint name="j2n6s200_joint_finger_tip_2" type="fixed">
     <parent link="j2n6s200_link_finger_2"/>
     <child link="j2n6s200_link_finger_tip_2"/>
     <axis xyz="0 0 1"/>
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
-    <limit effort="2000" lower="0" upper="2" velocity="1"/>
+    <limit effort="0" lower="0" upper="2" velocity="1"/>
   </joint>
 
 
