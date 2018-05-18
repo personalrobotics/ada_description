@@ -69,11 +69,11 @@
       <inertia ixx="0.00152031725204" ixy="0" ixz="0" iyy="0.00152031725204" iyz="0" izz="0.00059816"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_1" type="continuous">
+  <joint name="j2n6s200_joint_1" type="revolute">
     <parent link="j2n6s200_link_base"/>
     <child link="j2n6s200_link_1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-3.141592" upper="3.141592" velocity="1"/>
+    <limit effort="2000" lower="-10" upper="10" velocity="1"/>
     <origin rpy="0 3.14159265359 0" xyz="0 0 0.15675"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -198,11 +198,11 @@
       <inertia ixx="7.73496906e-05" ixy="0" ixz="0" iyy="7.73496906e-05" iyz="0" izz="0.0001428"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_4" type="continuous">
+  <joint name="j2n6s200_joint_4" type="revolute">
     <parent link="j2n6s200_link_3"/>
     <child link="j2n6s200_link_4"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-3.141592" upper="3.141592" velocity="1"/>
+    <limit effort="2000" lower="-10" upper="10" velocity="1"/>
     <origin rpy="-1.57079632679 0 3.14159265359" xyz="0 0.2073 -0.0114"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -241,11 +241,11 @@
       <inertia ixx="7.73496906e-05" ixy="0" ixz="0" iyy="7.73496906e-05" iyz="0" izz="0.0001428"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_5" type="continuous">
+  <joint name="j2n6s200_joint_5" type="revolute">
     <parent link="j2n6s200_link_4"/>
     <child link="j2n6s200_link_5"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-3.141592" upper="3.141592" velocity="1"/>
+    <limit effort="2000" lower="-10" upper="10" velocity="1"/>
     <origin rpy="1.0471975512 0 3.14159265359" xyz="0 -0.03703 -0.06414"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -284,11 +284,11 @@
       <inertia ixx="0.000370498518" ixy="0" ixz="0" iyy="0.000370498518" iyz="0" izz="0.000624"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_6" type="continuous">
+  <joint name="j2n6s200_joint_6" type="revolute">
     <parent link="j2n6s200_link_5"/>
     <child link="j2n6s200_link_6"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-3.141592" upper="3.141592" velocity="1"/>
+    <limit effort="2000" lower="-10" upper="10" velocity="1"/>
     <origin rpy="1.0471975512 0 3.14159265359" xyz="0 -0.03703 -0.06414"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
