@@ -39,7 +39,7 @@
       <inertia ixx="0.000951270861568" ixy="0" ixz="0" iyy="0.000951270861568" iyz="0" izz="0.000374272"/>
     </inertial>
   </link>
-  <joint name="j2n6s200_joint_base" type="floating">
+  <joint name="j2n6s200_joint_base" type="fixed">
     <parent link="world"/>
     <child link="j2n6s200_link_base"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -116,7 +116,7 @@
     <parent link="j2n6s200_link_1"/>
     <child link="j2n6s200_link_2"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-3.8451785" upper="0.7035858" velocity="1"/>
+    <limit effort="2000" lower="0.82030474843" upper="5.46288055874" velocity="1"/>
     <origin rpy="-1.57079632679 0 3.14159265359" xyz="0 0.0016 -0.11875"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>

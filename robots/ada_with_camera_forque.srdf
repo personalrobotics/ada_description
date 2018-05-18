@@ -6,7 +6,10 @@
     <chain base_link="j2n6s200_link_base" tip_link="j2n6s200_end_effector"/>
 	<link name="j2n6s200_joule"/>
   </group>
+  <!-- <disable_collisions link1="j2n6s200_link_base" link2="world"/> -->
   <disable_collisions link1="j2n6s200_link_base" link2="j2n6s200_link_1"/>
+  <disable_collisions link1="j2n6s200_link_base" link2="j2n6s200_link_2"/>
+
   <disable_collisions link1="j2n6s200_link_1" link2="j2n6s200_link_2"/>
   <disable_collisions link1="j2n6s200_link_2" link2="j2n6s200_link_3"/>
   <disable_collisions link1="j2n6s200_link_3" link2="j2n6s200_link_4"/>
