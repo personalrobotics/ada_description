@@ -295,11 +295,6 @@
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
-    <visual>
-      <geometry>
-        <mesh filename="package://ada_description/meshes/ring_small.dae"/>
-      </geometry>
-    </visual>
     <collision>
       <geometry>
         <mesh filename="package://ada_description/meshes/collision_hand_2finger.dae"/>

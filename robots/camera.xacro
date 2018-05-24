@@ -22,16 +22,16 @@
       <visual>
         <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <mesh filename="package://ada_description/meshes/camera_joule_tex.STL" scale="0.001 0.001 0.001"/>
+          <mesh filename="package://ada_description/meshes/joule_text.dae" scale="0.001 0.001 0.001"/>
         </geometry>
       <material name="carbon_fiber">
           <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
         </material>
       </visual>
       <collision>
-      <origin xyz="-0.014 -0.072 -0.025" rpy="0 0 0"/>
+        <origin  rpy="0 0 0" xyz="-0.014 -0.072 -0.033"/>
         <geometry>
-          <mesh filename="package://ada_description/meshes/camera_joule_tex.dae" scale="0.001 0.001 0.00094"/>
+          <mesh filename="package://ada_description/meshes/collision_camera_joule_tex.dae" scale="0.001 0.001 0.00098"/>
         </geometry>
       </collision>
     </link>
@@ -40,7 +40,7 @@
       <child link="${prefix}_joule"/>
       <axis xyz="0 0 1"/>
       <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
-    <origin rpy="-1.57079632679 1.57079632679 0" xyz="-0.06 -0.051 -0.0163"/>
+      <origin rpy="1.57079632679 1.57079632679 0" xyz="0.06 0.051 0.0140"/>
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
 
