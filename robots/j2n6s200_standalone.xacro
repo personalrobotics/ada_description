@@ -28,7 +28,8 @@
   <property name="robot_root" value="world" />
   <property name="prefix" value="j2n6s200" />
 
-  <xacro:j2n6s200  base_parent="${robot_root}" use_final_ring="'false'"/>
+  <xacro:j2n6s200  base_parent="${robot_root}" hide_final_ring="$(arg with_camera)"/>
+  <!--xacro:j2n6s200  base_parent="${robot_root}" /-->
 
   <xacro:if value="$(arg with_camera)">
     <xacro:camera  camera_parent="${prefix}_link_6"/>

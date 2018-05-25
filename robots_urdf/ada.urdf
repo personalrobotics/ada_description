@@ -295,6 +295,11 @@
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://ada_description/meshes/ring_small.dae"/>
+      </geometry>
+    </visual>
     <collision>
       <geometry>
         <mesh filename="package://ada_description/meshes/collision_hand_2finger.dae"/>
@@ -470,4 +475,5 @@
     <origin rpy="0 0 0" xyz="0.044 -0.003 0"/>
     <limit effort="0" lower="0" upper="2" velocity="1"/>
   </joint>
+  <!--xacro:j2n6s200  base_parent="${robot_root}" /-->
 </robot>
