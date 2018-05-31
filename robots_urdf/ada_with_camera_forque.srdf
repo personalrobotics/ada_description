@@ -32,6 +32,9 @@
   <disable_collisions link1="j2n6s200_link_finger_tip_1" link2="j2n6s200_link_finger_2"/>
   <disable_collisions link1="j2n6s200_link_finger_tip_1" link2="j2n6s200_link_finger_tip_2"/>
   
+  <disable_collisions link1="j2n6s200_link_finger_1" link2="j2n6s200_link_6"/>
+  <disable_collisions link1="j2n6s200_link_finger_2" link2="j2n6s200_link_6"/>
+  
   <disable_collisions link1="j2n6s200_link_finger_1" link2="j2n6s200_forque"/>
   <disable_collisions link1="j2n6s200_link_finger_2" link2="j2n6s200_forque"/>
   <disable_collisions link1="j2n6s200_link_finger_tip_1" link2="j2n6s200_forque"/>
