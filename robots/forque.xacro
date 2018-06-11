@@ -3,17 +3,6 @@
 
 
 <root xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
-    xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model"
-    xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
-    xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
-    xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
-    xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#joint"
-    xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
-    xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
-    xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering"
-    xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
-    xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
     xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="forque" params="forque_parent prefix:=j2n6s200">
@@ -32,11 +21,6 @@
           <mesh filename="package://ada_description/meshes/collision_forque_kinova.dae" scale="0.001 0.001 0.001"/>
         </geometry>
       </collision>
-      <!-- <inertial>
-        <mass value="0.01"/>
-        <origin xyz="0.022 0 0"/>
-        <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
-      </inertial> -->
     </link>
     <joint name="j2n6s200_joint_forque" type="fixed">
       <parent link="${forque_parent}"/>

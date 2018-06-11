@@ -17,7 +17,6 @@
    wrist_spherical_1  8
    wrist_spherical_2  9
 
-   hand 3 finger  		55
    hand_2finger   		56
    finger_proximal		57
    finger_distal      58 
@@ -34,13 +33,10 @@
    wrist_spherical_1  8
    wrist_spherical_2  9
 
-   hand 3 finger  		55
    hand_2finger   		56
    finger_proximal		57
    finger_distal      58 
 -->
-  <!-- Import all Gazebo-customization elements -->
-  <!--xacro:include filename="$(find ada_description)/robots/kinova.gazebo" /-->
   <link name="world"/>
   <!--xacro:gazebo_config robot_namespace="${prefix}"/-->
   <link name="j2n6s200_link_base">
@@ -67,7 +63,7 @@
     <parent link="world"/>
     <child link="j2n6s200_link_base"/>
     <axis xyz="0 0 0"/>
-    <limit effort="2000" lower="0" upper="0" velocity="1"/>
+    <limit effort="2000" lower="0" upper="0" velocity="1.4"/>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -100,7 +96,7 @@
     <parent link="j2n6s200_link_base"/>
     <child link="j2n6s200_link_1"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
+    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1.4"/>
     <origin rpy="0 3.14159265359 0" xyz="0 0 0.15675"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -143,7 +139,7 @@
     <parent link="j2n6s200_link_1"/>
     <child link="j2n6s200_link_2"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="0.820304748437" upper="5.46288055874" velocity="1"/>
+    <limit effort="2000" lower="0.820304748437" upper="5.46288055874" velocity="1.4"/>
     <origin rpy="-1.57079632679 0 3.14159265359" xyz="0 0.0016 -0.11875"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -186,7 +182,7 @@
     <parent link="j2n6s200_link_2"/>
     <child link="j2n6s200_link_3"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="0.331612557879" upper="5.9515727493" velocity="1"/>
+    <limit effort="2000" lower="0.331612557879" upper="5.9515727493" velocity="1.4"/>
     <origin rpy="0 3.14159265359 0" xyz="0 -0.410 0"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -229,7 +225,7 @@
     <parent link="j2n6s200_link_3"/>
     <child link="j2n6s200_link_4"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
+    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1.4"/>
     <origin rpy="-1.57079632679 0 3.14159265359" xyz="0 0.2073 -0.0114"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -272,7 +268,7 @@
     <parent link="j2n6s200_link_4"/>
     <child link="j2n6s200_link_5"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
+    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1.4"/>
     <origin rpy="1.0471975512 0 3.14159265359" xyz="0 -0.03703 -0.06414"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -310,7 +306,7 @@
     <parent link="j2n6s200_link_5"/>
     <child link="j2n6s200_link_6"/>
     <axis xyz="0 0 1"/>
-    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1"/>
+    <limit effort="2000" lower="-6.28318530718" upper="6.28318530718" velocity="1.4"/>
     <origin rpy="1.0471975512 0 3.14159265359" xyz="0 -0.03703 -0.06414"/>
     <dynamics damping="0.0" friction="0.0"/>
   </joint>
@@ -510,11 +506,6 @@
         <mesh filename="package://ada_description/meshes/collision_forque_kinova.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
-    <!-- <inertial>
-        <mass value="0.01"/>
-        <origin xyz="0.022 0 0"/>
-        <inertia ixx="7.8999684e-07" ixy="0" ixz="0" iyy="7.8999684e-07" iyz="0" izz="8e-08"/>
-      </inertial> -->
   </link>
   <joint name="j2n6s200_joint_forque" type="fixed">
     <parent link="j2n6s200_end_effector"/>
