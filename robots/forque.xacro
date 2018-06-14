@@ -37,7 +37,18 @@
       <child link="j2n6s200_forque_end_effector"/>
       <axis xyz="0 0 0"/>
       <limit effort="2000" lower="0" upper="0" velocity="1"/>
-      <origin rpy="3.1415 0 0" xyz="0 0 -0.1"/>
+      <origin rpy="3.1415 0 0" xyz="0 -0.007 -0.093"/>
+      <!-- Rotation consistent with pointers of forque: -->
+      <!-- <origin rpy="2.6415 0 0" xyz="0 -0.007 -0.093"/> -->
+    </joint>
+
+    <link name="j2n6s200_forque_tip">
+  </link>
+    <joint name="j2n6s200_joint_forque_tip" type="fixed">
+      <parent link="j2n6s200_forque"/>
+      <child link="j2n6s200_forque_tip"/>
+      <axis xyz="0 0 0"/>
+      <limit effort="2000" lower="0" upper="0" velocity="1"/>
     </joint>
 
   </xacro:macro>
