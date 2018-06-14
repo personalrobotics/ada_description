@@ -11,9 +11,6 @@
    arm            		2
    forearm        		3
    wrist          		4
-   arm_mico       		5
-   arm_half1 (7dof)		6
-   arm_half2 (7dof)		7
    wrist_spherical_1  8
    wrist_spherical_2  9
 
@@ -27,9 +24,6 @@
    arm            		2
    forearm        		3
    wrist          		4
-   arm_mico       		5
-   arm_half1 (7dof)		6
-   arm_half2 (7dof)		7
    wrist_spherical_1  8
    wrist_spherical_2  9
 
