@@ -84,6 +84,12 @@
     <property name="joint_end_effector_origin_xyz" value="0 0 -0.1600" />
     <property name="joint_end_effector_origin_rpy" value="${J_PI} 0 0" />
 
+    <property name="joint_finger_tips" value="end_effector_offset" />
+    <property name="joint_finger_tips_type" value="fixed" />
+    <property name="joint_finger_tips_axis_xyz" value="0 0 0" />
+    <property name="joint_finger_tips_origin_xyz" value="0 0 -0.1970" />
+    <property name="joint_finger_tips_origin_rpy" value="${J_PI} 0 0" />
+
     <property name="joint_hand_base" value="hand_base" />
     <property name="joint_hand_base_type" value="fixed" />
     <property name="joint_hand_base_axis_xyz" value="0 0 0" />
@@ -118,6 +124,9 @@
 
         <xacro:kinova_virtual_link link_name="${prefix}_end_effector"/>
         <xacro:kinova_virtual_joint joint_name="${prefix}_joint_end_effector" type="${joint_end_effector_type}" parent="${prefix}_link_6" child="${prefix}_end_effector" joint_axis_xyz="${joint_end_effector_axis_xyz}" joint_origin_xyz="${joint_end_effector_origin_xyz}" joint_origin_rpy="${joint_end_effector_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
+
+        <xacro:kinova_virtual_link link_name="${prefix}_finger_tips"/>
+        <xacro:kinova_virtual_joint joint_name="${prefix}_joint_finter_tips" type="${joint_finger_tips_type}" parent="${prefix}_link_6" child="${prefix}_finger_tips" joint_axis_xyz="${joint_finger_tips_axis_xyz}" joint_origin_xyz="${joint_finger_tips_origin_xyz}" joint_origin_rpy="${joint_finger_tips_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
 
         <xacro:kinova_virtual_link link_name="${prefix}_hand_base"/>
         <xacro:kinova_virtual_joint joint_name="${prefix}_joint_hand_base" type="${joint_hand_base_type}" parent="${prefix}_link_6" child="${prefix}_hand_base" joint_axis_xyz="${joint_hand_base_axis_xyz}" joint_origin_xyz="${joint_hand_base_origin_xyz}" joint_origin_rpy="${joint_hand_base_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
