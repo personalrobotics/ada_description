@@ -87,8 +87,8 @@
     <property name="joint_hand_tip" value="end_effector_offset" />
     <property name="joint_hand_tip_type" value="fixed" />
     <property name="joint_hand_tip_axis_xyz" value="0 0 0" />
-    <property name="joint_hand_tip_origin_xyz" value="0 0 -0.1970" />
-    <property name="joint_hand_tip_origin_rpy" value="${J_PI} 0 0" />
+    <property name="joint_hand_tip_origin_xyz" value="0 0 0.0370" />
+    <property name="joint_hand_tip_origin_rpy" value="0 0 0" />
 
     <property name="joint_hand_base" value="hand_base" />
     <property name="joint_hand_base_type" value="fixed" />
@@ -126,7 +126,7 @@
         <xacro:kinova_virtual_joint joint_name="${prefix}_joint_end_effector" type="${joint_end_effector_type}" parent="${prefix}_link_6" child="${prefix}_end_effector" joint_axis_xyz="${joint_end_effector_axis_xyz}" joint_origin_xyz="${joint_end_effector_origin_xyz}" joint_origin_rpy="${joint_end_effector_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
 
         <xacro:kinova_virtual_link link_name="${prefix}_hand_tip"/>
-        <xacro:kinova_virtual_joint joint_name="${prefix}_joint_hand_tip" type="${joint_hand_tip_type}" parent="${prefix}_hand_base" child="${prefix}_hand_tip" joint_axis_xyz="${joint_hand_tip_axis_xyz}" joint_origin_xyz="${joint_hand_tip_origin_xyz}" joint_origin_rpy="${joint_hand_tip_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
+        <xacro:kinova_virtual_joint joint_name="${prefix}_joint_hand_tip" type="${joint_hand_tip_type}" parent="${prefix}_end_effector" child="${prefix}_hand_tip" joint_axis_xyz="${joint_hand_tip_axis_xyz}" joint_origin_xyz="${joint_hand_tip_origin_xyz}" joint_origin_rpy="${joint_hand_tip_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>
 
         <xacro:kinova_virtual_link link_name="${prefix}_hand_base"/>
         <xacro:kinova_virtual_joint joint_name="${prefix}_joint_hand_base" type="${joint_hand_base_type}" parent="${prefix}_link_6" child="${prefix}_hand_base" joint_axis_xyz="${joint_hand_base_axis_xyz}" joint_origin_xyz="${joint_hand_base_origin_xyz}" joint_origin_rpy="${joint_hand_base_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
