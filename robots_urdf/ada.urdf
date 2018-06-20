@@ -328,11 +328,11 @@
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
     <origin rpy="3.14159265359 0 0" xyz="0 0 -0.1600"/>
   </joint>
-  <link name="j2n6s200_finger_tips">
+  <link name="j2n6s200_hand_tip">
   </link>
-  <joint name="j2n6s200_joint_finter_tips" type="fixed">
+  <joint name="j2n6s200_joint_hand_tip" type="fixed">
     <parent link="j2n6s200_hand_base"/>
-    <child link="j2n6s200_finger_tips"/>
+    <child link="j2n6s200_hand_tip"/>
     <axis xyz="0 0 0"/>
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
     <origin rpy="3.14159265359 0 0" xyz="0 0 -0.1970"/>
