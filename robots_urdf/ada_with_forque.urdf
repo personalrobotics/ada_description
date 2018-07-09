@@ -494,7 +494,7 @@
     <parent link="j2n6s200_end_effector"/>
     <child link="j2n6s200_forque"/>
     <axis xyz="0 0 1"/>
-    <origin rpy="3.14 0 0" xyz="-0.001 -0.000 0.09"/>
+    <origin rpy="3.14 0 0" xyz="-0.003 -0.000 0.078"/>
     <limit effort="2000" lower="0" upper="2" velocity="1"/>
   </joint>
   <link name="j2n6s200_forque_end_effector">
@@ -505,8 +505,6 @@
     <axis xyz="0 0 0"/>
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
     <origin rpy="3.1415 0 0" xyz="0 -0.007 -0.093"/>
-    <!-- Rotation consistent with pointers of forque: -->
-    <!-- <origin rpy="2.6415 0 0" xyz="0 -0.007 -0.093"/> -->
   </joint>
   <link name="j2n6s200_forque_tip">
   </link>
@@ -515,5 +513,7 @@
     <child link="j2n6s200_forque_tip"/>
     <axis xyz="0 0 0"/>
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
+    <!-- Rotation consistent with pointers of forque: -->
+    <origin rpy="2.6415 0 0" xyz="0 -0.007 -0.093"/>
   </joint>
 </robot>
