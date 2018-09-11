@@ -26,7 +26,7 @@
       <parent link="${forque_parent}"/>
       <child link="j2n6s200_forque"/>
       <axis xyz="0 0 1"/>
-      <origin rpy="3.14 0 0" xyz="0.01 -0.000 0.078"/>
+      <origin rpy="3.14 0 0" xyz="-0.003 -0.0013 0.065"/>
       <limit effort="2000" lower="0" upper="2" velocity="1"/>
     </joint>
 
