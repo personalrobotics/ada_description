@@ -14,7 +14,7 @@
     <property name="link_3_mesh" value="forearm" />
     <property name="link_4_mesh" value="wrist" />
     <property name="link_5_mesh" value="wrist" />
-    <property name="link_6_mesh" value="hand_2finger" />
+    <property name="link_6_mesh" value="hand_3finger" />
 
     <property name="link_base_mesh_no" value="0" />
     <property name="link_1_mesh_no" value="1" />
@@ -131,7 +131,7 @@
         <xacro:kinova_virtual_link link_name="${prefix}_hand_base"/>
         <xacro:kinova_virtual_joint joint_name="${prefix}_joint_hand_base" type="${joint_hand_base_type}" parent="${prefix}_link_6" child="${prefix}_hand_base" joint_axis_xyz="${joint_hand_base_axis_xyz}" joint_origin_xyz="${joint_hand_base_origin_xyz}" joint_origin_rpy="${joint_hand_base_origin_rpy}" joint_lower_limit="0" joint_upper_limit="0"/>    
 
-        <xacro:kinova_2fingers link_hand="${prefix}_hand_base" prefix="${prefix}_"/>
+        <xacro:kinova_3fingers link_hand="${prefix}_hand_base" prefix="${prefix}_"/>
     </xacro:macro>
  
 
