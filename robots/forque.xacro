@@ -26,7 +26,15 @@
       <parent link="${forque_parent}"/>
       <child link="j2n6s200_forque"/>
       <axis xyz="0 0 1"/>
-      <origin rpy="3.14 0 0" xyz="-0.003 -0.0013 0.065"/>
+      <!-- <origin rpy="3.14 0 0" xyz="-0.003 -0.0013 0.065"/> -->
+
+      <!-- was perfect -->
+      <!-- <origin rpy="3.14 0 0" xyz="0.02 -0.0026 0.065"/> -->
+
+      <!-- <origin rpy="3.14 0 0" xyz="0.02556679118 -0.00332368285 0.08309207135"/> -->
+
+      <origin rpy="3.14 0 -0.31" xyz="0.02556679118 -0.00332368285 0.08309207135"/>
+
       <limit effort="2000" lower="0" upper="2" velocity="1"/>
     </joint>
 
