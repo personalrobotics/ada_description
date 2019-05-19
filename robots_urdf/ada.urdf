@@ -74,6 +74,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -117,6 +120,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -160,6 +166,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -203,6 +212,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -246,6 +258,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -289,6 +304,9 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -352,7 +370,7 @@
         <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
       </geometry>
       <material name="silver">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -389,7 +407,7 @@
         <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
       </geometry>
       <material name="silver">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -416,7 +434,7 @@
         <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
       </geometry>
       <material name="silver">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -453,7 +471,7 @@
         <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
       </geometry>
       <material name="silver">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
