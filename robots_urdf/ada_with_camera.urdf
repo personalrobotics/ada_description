@@ -16,7 +16,7 @@
 
    hand_2finger   		56
    finger_proximal		57
-   finger_distal      58 
+   finger_distal      58
 -->
   <!-- links      		mesh_no
    base           		0
@@ -29,7 +29,7 @@
 
    hand_2finger   		56
    finger_proximal		57
-   finger_distal      58 
+   finger_distal      58
 -->
   <link name="world"/>
   <!--xacro:gazebo_config robot_namespace="${prefix}"/-->
@@ -39,7 +39,7 @@
         <mesh filename="package://ada_description/meshes/base.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -67,13 +67,16 @@
         <mesh filename="package://ada_description/meshes/shoulder.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -110,13 +113,16 @@
         <mesh filename="package://ada_description/meshes/arm.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -153,13 +159,16 @@
         <mesh filename="package://ada_description/meshes/forearm.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_big.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -196,13 +205,16 @@
         <mesh filename="package://ada_description/meshes/wrist.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -239,13 +251,16 @@
         <mesh filename="package://ada_description/meshes/wrist.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <visual>
       <geometry>
         <mesh filename="package://ada_description/meshes/ring_small.dae"/>
       </geometry>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -282,7 +297,7 @@
         <mesh filename="package://ada_description/meshes/hand_2finger.dae"/>
       </geometry>
       <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+        <color rgba="0.1 0.1 0.1 1"/>
       </material>
     </visual>
     <collision>
@@ -346,8 +361,8 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
       </geometry>
-      <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -383,8 +398,8 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
       </geometry>
-      <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -410,8 +425,8 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/finger_proximal.dae"/>
       </geometry>
-      <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -447,8 +462,8 @@
       <geometry>
         <mesh filename="package://ada_description/meshes/finger_distal.dae"/>
       </geometry>
-      <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      <material name="silver">
+        <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
     <collision>
@@ -477,8 +492,8 @@
         <mesh filename="package://ada_description/meshes/camera_joule.dae" scale="0.001 0.001 0.001"/>
         <!-- <mesh filename="package://ada_description/meshes/collision_camera_joule.dae" scale="0.001 0.001 0.00098"/> -->
       </geometry>
-      <material name="carbon_fiber">
-        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+      <material name="grey">
+        <color rgba="0.3 0.3 0.3 1"/>
       </material>
     </visual>
     <collision>
