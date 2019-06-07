@@ -472,19 +472,18 @@
   <!--xacro:j2n6s200  base_parent="${robot_root}" /-->
   <link name="j2n6s200_joule">
     <visual>
-      <origin rpy="0 0 0" xyz="-0.014 -0.062 -0.023"/>
+      <origin rpy="1.5708 0 0" xyz="-0.018 0.0185 -0.041"/>
       <geometry>
-        <mesh filename="package://ada_description/meshes/camera_joule.dae" scale="0.001 0.001 0.001"/>
-        <!-- <mesh filename="package://ada_description/meshes/collision_camera_joule.dae" scale="0.001 0.001 0.00098"/> -->
-      </geometry>
+        <mesh filename="package://ada_description/meshes/nano_all.STL" scale="0.001 0.001 0.001"/>
+       </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="-0.014 -0.062 -0.023"/>
+      <origin rpy="1.5708 3.14159 0" xyz="0.1 -0.092 0.096"/>
       <geometry>
-        <mesh filename="package://ada_description/meshes/collision_camera_joule.dae" scale="0.001 0.001 0.00098"/>
+        <mesh filename="package://ada_description/meshes/nano_coll.dae" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
