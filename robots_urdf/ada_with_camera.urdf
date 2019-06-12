@@ -472,7 +472,7 @@
   <!--xacro:j2n6s200  base_parent="${robot_root}" /-->
   <link name="j2n6s200_joule">
     <visual>
-      <origin rpy="1.5708 0 0" xyz="-0.018 0.0185 -0.041"/>
+      <origin rpy="-1.5708 0 0 " xyz="-0.018 -0.138 0.142 "/>
       <geometry>
         <mesh filename="package://ada_description/meshes/nano_all.STL" scale="0.001 0.001 0.001"/>
        </geometry>
@@ -481,7 +481,7 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="1.5708 3.14159 0" xyz="0.1 -0.092 0.096"/>
+      <origin rpy="-1.5708 3.1415926 0" xyz="0.105 -0.028 0.008"/>
       <geometry>
         <mesh filename="package://ada_description/meshes/nano_coll.dae" scale="0.001 0.001 0.001"/>
       </geometry>
