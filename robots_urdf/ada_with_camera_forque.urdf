@@ -474,7 +474,7 @@
     <visual>
       <origin rpy="-1.5708 0 0 " xyz="-0.018 -0.138 0.142 "/>
       <geometry>
-        <mesh filename="package://ada_description/meshes/nano_all.STL" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://ada_description/meshes/nano_all.dae" scale="0.001 0.001 0.001"/>
        </geometry>
       <material name="carbon_fiber">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
