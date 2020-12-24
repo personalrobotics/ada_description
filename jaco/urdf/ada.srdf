@@ -18,7 +18,6 @@
   <disable_collisions link1="j2n6s200_end_effector" link2="j2n6s200_hand_base"/>
   
   <group name="j2n6s200_hand">
-    <link name="j2n6s200_hand_base"/>
     <link name="j2n6s200_link_finger_1"/>
     <link name="j2n6s200_link_finger_tip_1"/>
     <link name="j2n6s200_link_finger_2"/>
@@ -29,6 +28,6 @@
   <disable_collisions link1="j2n6s200_link_finger_1" link2="j2n6s200_link_finger_tip_2"/>
   <disable_collisions link1="j2n6s200_link_finger_tip_1" link2="j2n6s200_link_finger_2"/>
   <disable_collisions link1="j2n6s200_link_finger_tip_1" link2="j2n6s200_link_finger_tip_2"/>
-  <end_effector group="j2n6s200_hand" name="j2n6s200_manipulator" parent_group="j2n6s200_manipulator" parent_link="j2n6s200_end_effector"/>
+  <end_effector group="j2n6s200_hand" name="j2n6s200_manipulator" parent_group="j2n6s200_manipulator" parent_link="j2n6s200_hand_base"/>
 </robot>
 
