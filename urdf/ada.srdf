@@ -13,7 +13,6 @@
         <chain base_link="base_link" tip_link="end_effector_link"/>
     </group>
     <group name="hand">
-        <link name="robotiq_arg2f_base_link"/>
         <link name="left_outer_knuckle"/>
         <link name="left_outer_finger"/>
         <link name="left_inner_finger"/>
@@ -27,7 +26,7 @@
         <link name="tool_frame"/>
     </group>
     <!--END EFFECTOR: Purpose: Represent information about an end effector.-->
-    <end_effector name="manipulator" parent_link="end_effector_link" group="hand" parent_group="manipulator"/>
+    <end_effector name="manipulator" parent_link="robotiq_arg2f_base_link" group="hand" parent_group="manipulator"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base_link" link2="forearm_link" reason="Never"/>
     <disable_collisions link1="base_link" link2="half_arm_1_link" reason="Never"/>
