@@ -18,6 +18,7 @@
   <disable_collisions link1="j2n6s200_end_effector" link2="j2n6s200_hand_base"/>
   
   <group name="j2n6s200_hand">
+    <link name="j2n6s200_hand_base"/>
     <link name="j2n6s200_link_finger_1"/>
     <link name="j2n6s200_link_finger_tip_1"/>
     <link name="j2n6s200_link_finger_2"/>
