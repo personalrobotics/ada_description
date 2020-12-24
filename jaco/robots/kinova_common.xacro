@@ -4,17 +4,17 @@
 <root xmlns:xi="http://www.w3.org/2001/XInclude"
 	xmlns:xacro="http://ros.org/wiki/xacro">
 
-<xacro:include filename="$(find ada_description)/robots/kinova_inertial.xacro" />
+<xacro:include filename="$(find ada_description)/jaco/robots/kinova_inertial.xacro" />
 
 
-    <property name="J_PI" value="3.1415926535897931" />
+    <xacro:property name="J_PI" value="3.1415926535897931" scope="global" />
 
     <xacro:macro name="kinova_armlink" params="link_name link_mesh ring_mesh:=ring_big use_ring_mesh:=false mesh_no">
         <link name="${link_name}">
             <visual>
                 <geometry>
                     <mesh
-                        filename="package://ada_description/meshes/${link_mesh}.dae"/>
+                        filename="package://ada_description/jaco/meshes/${link_mesh}.dae"/>
                 </geometry>
                 <material name="carbon_fiber">
                     <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
@@ -26,7 +26,7 @@
 	           <visual>
                 <geometry>
                     <mesh
-                        filename="package://ada_description/meshes/${ring_mesh}.dae"/>
+                        filename="package://ada_description/jaco/meshes/${ring_mesh}.dae"/>
                 </geometry>
              </visual>
 	    </xacro:if>
@@ -34,7 +34,7 @@
             <collision>
                 <geometry>
                     <mesh
-                        filename="package://ada_description/meshes/collision_${link_mesh}.dae"/>
+                        filename="package://ada_description/jaco/meshes/collision_${link_mesh}.dae"/>
                 </geometry>
             </collision>
 						<xacro:kinova_inertial mesh_no="${mesh_no}"/>

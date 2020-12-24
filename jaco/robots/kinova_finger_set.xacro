@@ -16,7 +16,7 @@
     xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
     xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find ada_description)/robots/kinova_common.xacro" />
+    <xacro:include filename="$(find ada_description)/jaco/robots/kinova_common.xacro" />
 
     <xacro:macro name="kinova_2fingers" params="link_hand prefix">
 
