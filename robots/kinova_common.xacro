@@ -68,7 +68,17 @@
 
     <xacro:macro name="kinova_virtual_link" params="link_name">
       <link name="${link_name}">
-  </link>
+        <!--
+        In order to model the link in simulation it must have an inertial tag, even
+        though it is only a dummy link. Furthermore, it must have a non-zero mass/inertia,
+        so just use random values.
+        -->
+        <inertial>
+          <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+          <mass value="0.3"/>
+          <inertia ixx="0.1" ixy="0.4" ixz="0.1" iyy="0.5" iyz="0.9" izz="0.2"/>
+        </inertial>
+      </link>
     </xacro:macro>
 
     <xacro:macro name="kinova_virtual_joint" params="joint_name type parent child joint_axis_xyz joint_origin_xyz joint_origin_rpy joint_lower_limit joint_upper_limit">
