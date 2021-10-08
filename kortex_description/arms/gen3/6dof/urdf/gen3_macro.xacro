@@ -242,7 +242,7 @@
     </joint>
 
     <xacro:if value="${vision}">
-    <link name="${prefix}color_camera_link">
+    <link name="${prefix}camera_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
