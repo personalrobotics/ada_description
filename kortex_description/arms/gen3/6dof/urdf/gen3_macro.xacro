@@ -263,7 +263,7 @@
     <joint name="${prefix}camera_color_joint" type="fixed">
       <origin xyz="0 0.05639 -0.00305" rpy="0 0 0" />
       <parent link="${prefix}end_effector_link" />
-      <child link="${prefix}color_camera_link" />
+      <child link="${prefix}camera_link" />
       <axis xyz="0.001 0.001 0.001" />
     </joint>
 
