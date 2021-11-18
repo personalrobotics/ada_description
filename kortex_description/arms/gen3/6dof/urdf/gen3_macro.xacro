@@ -242,11 +242,11 @@
     </joint>
 
     <xacro:if value="${vision}">
-    <link name="${prefix}color_camera_link">
+    <link name="${prefix}camera_link">
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <box size="0 0 0" />
+          <box size="0.001 0.001 0.001" />
         </geometry>
       </visual>
     </link>
@@ -255,23 +255,23 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <box size="0 0 0" />
+          <box size="0.001 0.001 0.001" />
         </geometry>
       </visual>
     </link>
 
     <joint name="${prefix}camera_color_joint" type="fixed">
-      <origin xyz="0 0.05639 -0.00305" rpy="0 0 0" />
+      <origin xyz="0 0.05639 -0.00305" rpy="0 0 3.14" />
       <parent link="${prefix}end_effector_link" />
-      <child link="${prefix}color_camera_link" />
-      <axis xyz="0 0 0" />
+      <child link="${prefix}camera_link" />
+      <axis xyz="0.001 0.001 0.001" />
     </joint>
 
     <joint name="${prefix}camera_depth_joint" type="fixed">
-      <origin xyz="0.0275 0.06600 -0.00305" rpy="0 0 0" />
+      <origin xyz="0.0275 0.06600 -0.00305" rpy="0 0 3.14" />
       <parent link="${prefix}end_effector_link" />
       <child link="${prefix}depth_camera_link" />
-      <axis xyz="0 0 0" />
+      <axis xyz="0.001 0.001 0.001" />
     </joint>
 
     </xacro:if>
