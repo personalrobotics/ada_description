@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:macro name="load_robot" params="arm gripper dof vision sim prefix">
+    <xacro:macro name="load_robot" params="arm gripper forque dof vision sim prefix">
             
         <!-- Files to include -->
         <xacro:include filename="$(find kortex_description)/arms/${arm}/${dof}dof/urdf/${arm}_macro.xacro" />
@@ -26,7 +26,7 @@
         <joint name="world_to_root" type="fixed">
             <child link="${prefix}base_link" />
             <parent link="world" />
-            <origin xyz="0 0 0" rpy="0 0 -1.57079632679" />    
+            <origin xyz="0 0 0" rpy="0 0 0" />    
         </joint> 
         
         <!-- Load the arm -->
@@ -49,6 +49,13 @@
                 <axis xyz="0 0 0" />
             </joint>
         </xacro:if>
+
+        <!-- Load the forque -->
+        <xacro:unless value="${not forque}">
+            <!-- last_arm_link is defined in "$(find kortex_description)/arms/${arm}/urdf/${arm}_macro.xacro" -->
+            <xacro:include filename="$(find kortex_description)/tools/forque/forque.xacro" />
+            <xacro:load_forque parent="${prefix}${last_arm_link}"  prefix="${prefix}"/> 
+        </xacro:unless>
 
         <!-- Load the Gazebo transmissions and gazebo_ros_control plugin -->
         <xacro:if value="${sim}">
