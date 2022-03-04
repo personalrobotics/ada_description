@@ -7,4 +7,5 @@ python /usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_0_9/ikfast.
 # NOTE: Actually compile the .cpp file generated into ikFast shared lib.
 gcc -fPIC -lstdc++ -DIKFAST_NO_MAIN -DIKFAST_CLIBRARY -shared -Wl,-soname,libada_camera_k3po.so -o libada_camera_k3po.so ada_bender_camera.cpp -llapack
 
-g++ -lstdc++ ada_bender.cpp -llapack -o ada_bender_test.out
+# NOTE: Compile a "test binary" we can use to see what the raw IK output should be.
+g++ -lstdc++ ada_bender_camera.cpp -llapack -o ada_camera_k3po_test.out
