@@ -4,6 +4,7 @@ rosrun moveit_kinematics round_collada_numbers.py ada_backup.dae ada_rounded.dae
 # NOTE: This assumes that we have a from-source OpenRave install.
 python /usr/local/lib/python2.7/dist-packages/openravepy/_openravepy_0_9/ikfast.py --robot=ada_with_camera.dae --iktype=transform6d --baselink=1 --eelink=7 --savefile=ada_bender_camera.cpp
 
-gcc -fPIC -lstdc++ -DIKFAST_NO_MAIN -DIKFAST_CLIBRARY -shared -Wl,-soname,libada_bender.so -o libada_bender.so ada_bender.cpp -llapack
+# NOTE: Actually compile the .cpp file generated into ikFast shared lib.
+gcc -fPIC -lstdc++ -DIKFAST_NO_MAIN -DIKFAST_CLIBRARY -shared -Wl,-soname,libada_camera_k3po.so -o libada_camera_k3po.so ada_bender_camera.cpp -llapack
 
 g++ -lstdc++ ada_bender.cpp -llapack -o ada_bender_test.out
