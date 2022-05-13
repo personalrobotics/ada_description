@@ -9,6 +9,11 @@
   </joint>
 
   <link name="${prefix}forque">
+    <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0" />
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
@@ -31,6 +36,11 @@
   </gazebo>
 
   <link name="${prefix}forque_end_effector">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
   </link>
     <joint name="${prefix}joint_forque_end_effector" type="fixed">
       <parent link="${prefix}forque"/>
@@ -40,7 +50,12 @@
       <origin rpy="0 0 0" xyz="0 0.007 0.18"/>
     </joint>
 
-    <link name="${prefix}forque_tip">
+  <link name="${prefix}forque_tip">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
   </link>
     <joint name="${prefix}joint_forque_tip" type="fixed">
       <parent link="${prefix}forque"/>

@@ -118,7 +118,7 @@
     <link name="${prefix}spherical_wrist_1_link">
       <inertial>
         <origin xyz="-1E-06 0.008486 -0.062937" rpy="0 0 0" />
-        <mass value="0.6781" />
+        <mass value="0.678" />
         <inertia ixx="0.001645" ixy="0" ixz="0" iyy="0.001666" iyz="-0.000234" izz="0.000389" />
       </inertial>
       <visual>
@@ -228,7 +228,13 @@
       <axis xyz="0 0 1" />
       <limit effort="9" velocity="1.2218" />
     </joint>
-    <link name="${prefix}end_effector_link" />
+    <link name="${prefix}end_effector_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0" />
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+      </inertial>
+    </link>
     <joint
       name="${prefix}end_effector"
       type="fixed">
@@ -243,6 +249,11 @@
 
     <xacro:if value="${vision}">
     <link name="${prefix}camera_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0" />
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+      </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -252,6 +263,11 @@
     </link>
 
     <link name="${prefix}depth_camera_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0" />
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+      </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>

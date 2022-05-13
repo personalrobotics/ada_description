@@ -10,10 +10,15 @@
     </joint>
 
     <link name="${prefix}robotiq_arg2f_base_link">
-      <inertial>
+<!--       <inertial>
         <origin xyz="8.625E-08 -4.6583E-06 0.03145" rpy="0 0 0" />
         <mass value="0.22652" />
         <inertia ixx="0.00020005" ixy="-4.2442E-10" ixz="-2.9069E-10" iyy="0.00017832" iyz="-3.4402E-08" izz="0.00013478" />
+      </inertial> -->
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <mass value="0" />
+        <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
@@ -32,6 +37,20 @@
            <mesh filename="package://kortex_description/grippers/robotiq_2f_85/meshes/collision/robotiq_arg2f_base_link.stl" />
         </geometry>
       </collision>
+    </link>
+
+    <joint name="${prefix}gripper_inertia_base_joint" type="fixed">
+        <parent link="${parent}"/>
+        <child link="${prefix}inertia_link"/>
+        <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    </joint>
+
+    <link name="${prefix}inertia_link">
+        <inertial>
+            <origin xyz="0 0 0.058" rpy="0 0 0"/>
+            <mass value="0.925"/>
+            <inertia ixx="0.000000" ixy="0.000000" ixz="0.000000" iyy="0.000000" iyz="0.000000" izz="0.000000"/>
+        </inertial>
     </link>
 
     <gazebo reference="${prefix}robotiq_arg2f_base_link">
