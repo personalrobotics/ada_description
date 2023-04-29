@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:macro name="load_robot" params="arm gripper forque dof vision sim prefix">
+    <xacro:macro name="load_robot" params="arm gripper forque reflect_cam realsense_cam dof vision sim prefix">
             
         <!-- Files to include -->
         <xacro:include filename="$(find kortex_description)/arms/${arm}/${dof}dof/urdf/${arm}_macro.xacro" />
@@ -62,6 +62,21 @@
             <xacro:include filename="$(find kortex_description)/tools/forque/forque.xacro" />
             <xacro:load_forque parent="${prefix}${last_arm_link}"  prefix="${prefix}"/> 
         </xacro:unless>
+
+        <!-- Load the realsense_camera -->
+        <xacro:unless value="${not realsense_cam}">
+            <!-- last_arm_link is defined in "$(find kortex_description)/arms/${arm}/urdf/${arm}_macro.xacro" -->
+            <xacro:include filename="$(find kortex_description)/tools/realsense_cam/realsense_cam_mount.xacro" />
+            <xacro:load_realsense_cam parent="${prefix}${last_arm_link}"  prefix="${prefix}" reflect="1"/> 
+        </xacro:unless>
+
+        <xacro:unless value="${not reflect_cam}">
+            <!-- last_arm_link is defined in "$(find kortex_description)/arms/${arm}/urdf/${arm}_macro.xacro" -->
+            <xacro:include filename="$(find kortex_description)/tools/realsense_cam/realsense_cam_mount.xacro" />
+            <xacro:load_realsense_cam parent="${prefix}${last_arm_link}"  prefix="${prefix}" reflect="-1"/> 
+        </xacro:unless>
+
+
 
         <!-- Load the Gazebo transmissions and gazebo_ros_control plugin -->
         <xacro:if value="${sim}">
