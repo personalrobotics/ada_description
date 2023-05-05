@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="load_realsense_cam" params="parent prefix reflect">
+
+
+  <link name="${prefix}realsense_camera_mount">
+     <visual>
+       <geometry>
+         <mesh filename="package://kortex_description/tools/realsense_cam/realsense_camera_mount.stl"/>
+       </geometry>
+       <material name="carbon_fiber">
+         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+       </material>
+     </visual>
+     <collision>
+       <geometry>
+         <mesh filename="package://kortex_description/tools/realsense_cam/realsense_camera_mount.stl"/>
+       </geometry>
+     </collision>
+     <inertial>
+       <mass value="0.01112"/>
+       <origin xyz="0.00247 0.13849 -0.24779"/>
+       <inertia ixx="8833.477" ixy="-133.424" ixz="74.447" iyy="13749.152" iyz="3032.151" izz="13388.826"/>
+     </inertial>
+   </link>
+   <joint name="${prefix}joint_realsense_camera_mount" type="fixed">
+     <parent link="${prefix}end_effector_link"/>
+     <child link="${prefix}realsense_camera_mount"/>
+     <axis xyz="0 0 0"/>
+     <limit effort="2000" lower="0" upper="0" velocity="1"/>
+     <origin rpy="${(1 + reflect) * 1.570795} 0 0" xyz="0.00 0.27 ${reflect * -0.40058}"/>
+   </joint>
+   <link name="${prefix}realsense_camera">
+     <visual>
+       <geometry>
+         <mesh filename="package://kortex_description/tools/realsense_cam/Intel_RealSense_D435i_shell.stl"/>
+       </geometry>
+       <material name="carbon_fiber">
+         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
+       </material>
+     </visual>
+     <collision>
+       <geometry>
+         <mesh filename="package://kortex_description/tools/realsense_cam/Intel_RealSense_D435i_shell.stl"/>
+       </geometry>
+     </collision>
+     <inertial>
+       <mass value="0.03046"/>
+       <origin xyz="0.01682 0.00003 -0.13272"/>
+       <inertia ixx="4106.688" ixy="14.566" ixz="179.85" iyy="27844.618" iyz="14.612" izz="27651.658"/>
+     </inertial>
+   </link>
+   <joint name="${prefix}joint_realsense_camera" type="fixed">
+     <parent link="${prefix}realsense_camera_mount"/>
+     <child link="${prefix}realsense_camera"/>
+     <axis xyz="0 0 0"/>
+     <limit effort="2000" lower="0" upper="0" velocity="1"/>
+     <origin rpy="0 0 0" xyz="0.0050 0.33926 -0.0905"/>
+   </joint>
+
+   </xacro:macro>
+
+</robot>
